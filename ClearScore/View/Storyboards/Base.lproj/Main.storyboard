@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="DashboardViewController" id="BYZ-38-t0r" customClass="DashboardViewController" customModule="ClearScore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ai-XK-gW9" customClass="ProgressIndicatorView" customModule="ClearScore" customModuleProvider="target">
+                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QWd-e6-Gzo">
+                                        <rect key="frame" x="100" y="30" width="50" height="190"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRu-Iy-GOs">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="score_title_label"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cN-ve-Tlc">
+                                                <rect key="frame" x="3" y="50" width="44" height="90"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="score_label"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="75"/>
+                                                <color key="textColor" red="0.95875912900000004" green="0.88681656119999996" blue="0.53718334440000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAn-lU-j8J">
+                                                <rect key="frame" x="0.0" y="140" width="50" height="50"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="max_score_label"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="8U7-l9-8cC"/>
+                                    <constraint firstAttribute="width" secondItem="4ai-XK-gW9" secondAttribute="height" multiplier="1:1" id="IT6-wb-tWC"/>
+                                    <constraint firstItem="QWd-e6-Gzo" firstAttribute="centerY" secondItem="4ai-XK-gW9" secondAttribute="centerY" id="ZMa-IO-J1g"/>
+                                    <constraint firstAttribute="centerX" secondItem="4ai-XK-gW9" secondAttribute="centerX" id="chL-py-58j"/>
+                                    <constraint firstItem="QWd-e6-Gzo" firstAttribute="centerX" secondItem="4ai-XK-gW9" secondAttribute="centerX" id="i6L-gj-cGP"/>
+                                    <constraint firstAttribute="centerY" secondItem="4ai-XK-gW9" secondAttribute="centerY" id="tdz-LT-9ge"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="125"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressBarColor">
+                                        <color key="value" red="0.95875912900000004" green="0.88681656119999996" blue="0.53718334440000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressBarWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressBarPercentage">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="hvS-aY-O3u">
+                                <rect key="frame" x="188.5" y="725" width="37" height="37"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="dashboard_screen"/>
+                        <constraints>
+                            <constraint firstItem="4ai-XK-gW9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QDb-Vk-T8e"/>
+                            <constraint firstItem="4ai-XK-gW9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ex7-iq-rhf"/>
+                            <constraint firstItem="hvS-aY-O3u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vVD-gc-Arc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hvS-aY-O3u" secondAttribute="bottom" constant="100" id="vvm-It-ap4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="creditScoreLabel" destination="0cN-ve-Tlc" id="wR8-Mm-waE"/>
+                        <outlet property="creditScoreTitleLabel" destination="SRu-Iy-GOs" id="tfv-3d-Mz9"/>
+                        <outlet property="creditScoreView" destination="4ai-XK-gW9" id="cxo-vf-Lz5"/>
+                        <outlet property="maxCreditScoreLabel" destination="RAn-lU-j8J" id="E2p-jd-R0e"/>
+                        <outlet property="spinner" destination="hvS-aY-O3u" id="SLT-7U-04H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
