@@ -11,6 +11,7 @@ protocol Alert {
     var view: XCUIElement { get }
 }
 
+// It's to wait for an alert to appear and disappear before asserting the elements
 extension Alert {
     
     @discardableResult

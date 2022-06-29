@@ -9,6 +9,7 @@ import UIKit
 
 final class ProgressIndicatorView: UIView {
     
+    // To round the layer corners
     @IBInspectable
     var cornerRadius: CGFloat {
         get {
@@ -19,6 +20,7 @@ final class ProgressIndicatorView: UIView {
         }
     }
     
+    // To create a border around the layer
     @IBInspectable
     var borderWidth: CGFloat {
         get {
@@ -29,6 +31,7 @@ final class ProgressIndicatorView: UIView {
         }
     }
     
+    // To set border color of the layer
     @IBInspectable
     var borderColor: UIColor? {
         get {
@@ -40,14 +43,19 @@ final class ProgressIndicatorView: UIView {
         }
     }
     
+    // To set progress bar color
     @IBInspectable var progressBarColor: UIColor = .clear {
         didSet { setNeedsDisplay() }
     }
     
+    // To set progress bar width
     @IBInspectable var progressBarWidth: CGFloat = 5 {
         didSet { setNeedsDisplay() }
     }
     
+    // To display progress in percentage
+    // `0` indicate no circle(No progress)
+    // `100` indicate a full circle(full progress)
     var progressBarPercentage: Double = .zero {
         didSet {
             showProgress()
@@ -66,6 +74,7 @@ final class ProgressIndicatorView: UIView {
         return circleLayer
     }()
     
+    // It returns circular Bezier path based on the percentage
     private lazy var circlePath: UIBezierPath = {
         var percentage = progressBarPercentage < 0 ? 0 : progressBarPercentage
         percentage = percentage > 100 ? 100 : percentage
@@ -96,6 +105,7 @@ final class ProgressIndicatorView: UIView {
         animateCircle()
     }
     
+    // To animate the progress bar
     private func animateCircle(duration: TimeInterval = 1) {
         // We want to animate the strokeEnd property of the circleLayer
         let animation = CABasicAnimation(keyPath: #keyPath(CAShapeLayer.strokeEnd))

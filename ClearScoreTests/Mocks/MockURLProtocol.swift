@@ -7,6 +7,7 @@
 
 import XCTest
 
+// Mock `URLProtocol` to test the services
 final class MockURLProtocol: URLProtocol {
     static var requestHandler: ((URLRequest) throws -> (URLResponse, Data?))?
     static var error: Error?

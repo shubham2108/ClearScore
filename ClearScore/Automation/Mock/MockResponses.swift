@@ -7,6 +7,7 @@
 
 import Foundation
 
+// It's mocking success and failure credit details response
 struct Mock {
     static let successResponse = Data("""
     {

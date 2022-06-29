@@ -7,6 +7,7 @@
 
 import UIKit
 
+//Coordinator is to handle all the naivigation in the app
 final class CoreCoordinator {
     
     lazy var navigationViewController: UINavigationController = {

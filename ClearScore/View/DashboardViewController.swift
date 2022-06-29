@@ -34,6 +34,7 @@ final class DashboardViewController: UIViewController {
         viewModel?.fetchCreditScore()
     }
     
+    //Binding between view and viewModel
     private func bind() {
         guard let viewModel = viewModel else { return }
         
@@ -60,6 +61,7 @@ final class DashboardViewController: UIViewController {
         ]
     }
     
+    // To show alert for error response
     private func showErrorAlert() {
         let alertController = UIAlertController(
             title: Constants.alertTitle,

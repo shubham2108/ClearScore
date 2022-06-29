@@ -33,6 +33,7 @@ final class DashboardViewModel {
         self.service = service
     }
     
+    // Fetch credit score from the server
     func fetchCreditScore() {
         showSpinner = true
         service?.creditDetails()

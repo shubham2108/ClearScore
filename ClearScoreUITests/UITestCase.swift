@@ -19,6 +19,7 @@ class UITestCase: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
 
+        // Set "XCUI" launch argument for all the tests
         application.launchArguments += ["XCUI"]
     }
 

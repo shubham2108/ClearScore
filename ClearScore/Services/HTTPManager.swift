@@ -23,7 +23,8 @@ final class HTTPManager {
     }
     
     func fetch<T: Decodable>(with url: String) -> AnyPublisher<T, HTTPError> {
-        ///Mock response when running XCUI tests
+        
+        // Mock response when running XCUI tests
         guard !AutomationHelper().isEnabled else {
             return mockFetch(with: url)
         }
@@ -42,7 +43,7 @@ final class HTTPManager {
     }
 }
 
-//Mock response for UI automation tests
+// Mock response for UI automation tests
 extension HTTPManager {
     
     func mockFetch<T: Decodable>(with url: String) -> AnyPublisher<T, HTTPError> {

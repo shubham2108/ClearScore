@@ -36,6 +36,7 @@
 		0BF60772286A6BF3001B7C64 /* NetworkErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF60771286A6BF3001B7C64 /* NetworkErrorAlert.swift */; };
 		0BF60775286A725D001B7C64 /* AutomationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF60774286A725C001B7C64 /* AutomationHelper.swift */; };
 		0BF60BE1286BBF9F001B7C64 /* ProgressIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF60BE0286BBF9F001B7C64 /* ProgressIndicatorView.swift */; };
+		51D0BFC2286CCF690014AE04 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 51D0BFC1286CCF690014AE04 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		0BF60771286A6BF3001B7C64 /* NetworkErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorAlert.swift; sourceTree = "<group>"; };
 		0BF60774286A725C001B7C64 /* AutomationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationHelper.swift; sourceTree = "<group>"; };
 		0BF60BE0286BBF9F001B7C64 /* ProgressIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorView.swift; sourceTree = "<group>"; };
+		51D0BFC1286CCF690014AE04 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		0B9AB0522863A19300B5C29E = {
 			isa = PBXGroup;
 			children = (
+				51D0BFC1286CCF690014AE04 /* README.md */,
 				0B9AB05D2863A19300B5C29E /* ClearScore */,
 				0B9AB0742863A19600B5C29E /* ClearScoreTests */,
 				0B9AB07E2863A19600B5C29E /* ClearScoreUITests */,
@@ -389,6 +392,7 @@
 			files = (
 				0B9AB06B2863A19500B5C29E /* LaunchScreen.storyboard in Resources */,
 				0B9AB0682863A19500B5C29E /* Assets.xcassets in Resources */,
+				51D0BFC2286CCF690014AE04 /* README.md in Resources */,
 				0B9AB0662863A19300B5C29E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,7 +546,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -596,7 +600,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -620,6 +624,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -647,6 +652,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -668,7 +674,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shubham.ClearScoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -687,7 +693,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shubham.ClearScoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -8,11 +8,13 @@
 import XCTest
 
 protocol Screen {
+    // Unique identifier for a screen
     var identifier: String { get }
 }
 
 extension Screen {
 
+    // Wait for a screen to appear
     @discardableResult
     func waitToAppear(timeout: TimeInterval = 10, file: StaticString = #file, line: UInt = #line) -> Self {
         let screen = XCUIApplication().otherElements[identifier]
@@ -22,6 +24,7 @@ extension Screen {
         return self
     }
     
+    // Assert screen title
     func assertTitle(_ title: String) {
         let predicateEvaluation = NSPredicate(format: #"label == "\#(title)""#)
         XCTAssertTrue(XCUIApplication().staticTexts.containing(predicateEvaluation).element.exists)
