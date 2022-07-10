@@ -23,7 +23,7 @@ final class DashboardViewController: UIViewController {
     @IBOutlet private weak var maxCreditScoreLabel: UILabel!
     @IBOutlet private weak var spinner: UIActivityIndicatorView!
     
-    var viewModel: DashboardViewModel?
+    var viewModel: DashboardViewModel!
     
     private var disposables = Set<AnyCancellable>()
     
@@ -31,12 +31,11 @@ final class DashboardViewController: UIViewController {
         super.viewDidLoad()
         
         bind()
-        viewModel?.fetchCreditScore()
+        viewModel.fetchCreditScore()
     }
     
     //Binding between view and viewModel
     private func bind() {
-        guard let viewModel = viewModel else { return }
         
         title = viewModel.viewTitle
         creditScoreTitleLabel.text = viewModel.credtScoreTitleText

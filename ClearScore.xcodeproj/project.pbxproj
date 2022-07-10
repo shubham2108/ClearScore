@@ -149,6 +149,7 @@
 				0B9AB4C92863A7CE00B5C29E /* ViewModel */,
 				0B9AB4CA2863B4C000B5C29E /* Services */,
 				0B9AB2A42863A3B400B5C29E /* Utilities */,
+				0B9AB4C32863A55100B5C29E /* Storyboards */,
 				0BF60773286A7208001B7C64 /* Automation */,
 				0B9AB0672863A19500B5C29E /* Assets.xcassets */,
 				0B9AB0692863A19500B5C29E /* LaunchScreen.storyboard */,
@@ -201,7 +202,6 @@
 		0B9AB4C42863A5E700B5C29E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0B9AB4C32863A55100B5C29E /* Storyboards */,
 				0B9AB0622863A19300B5C29E /* DashboardViewController.swift */,
 				0BF60BE0286BBF9F001B7C64 /* ProgressIndicatorView.swift */,
 			);

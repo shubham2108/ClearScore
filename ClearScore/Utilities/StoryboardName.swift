@@ -23,10 +23,3 @@ extension StoryboardName {
         return storyboard.instantiateViewController(as: type)
     }
 }
-
-extension StoryboardName where Self: RawRepresentable, Self.RawValue == String {
-    
-    public var name: String {
-        return rawValue.capitalized
-    }
-}
