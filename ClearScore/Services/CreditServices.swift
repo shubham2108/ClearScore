@@ -28,6 +28,6 @@ final class CreditServices {
 extension CreditServices: CreditServicing {
     
     func creditDetails() -> AnyPublisher<CreditDetails, HTTPError> {
-        HTTPManager(session: session).fetch(with: baseURL + "/mockcredit/values")
+        NetworkManager(session: session).fetch(with: "/mockcredit/values")
     }
 }

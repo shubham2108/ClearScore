@@ -1,0 +1,10 @@
+{
+    "creditReportInfo": {
+        "score": 600,
+        "scoreBand": 4,
+        "maxScoreValue": 1500,
+        "minScoreValue": 0
+    },
+    "dashboardStatus": "FAIL",
+    "personaType": "INEXPERIENCED"
+}

@@ -10,13 +10,13 @@ import Foundation
 // It's a helper to access the information from the launch arguments for automation testing
 struct AutomationHelper {
     enum Keys {
-        static let automationTesting = "XCUI"
+        static let automationTesting = "-runLocal"
         static let successResponse = "successResponse"
         static let errorResponse = "errorResponse"
     }
     
     // Use it to check, if automation tests are running or not
-    var isEnabled: Bool {
+    var shouldRunLocal: Bool {
         ProcessInfo.processInfo.arguments.contains(Keys.automationTesting)
     }
     
@@ -26,7 +26,7 @@ struct AutomationHelper {
             return Mock.successResponse
         }
         
-        if ProcessInfo.processInfo.arguments.contains(Keys.successResponse) {
+        if ProcessInfo.processInfo.arguments.contains(Keys.errorResponse) {
             return Mock.errorResponse
         }
         

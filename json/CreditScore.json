@@ -1,0 +1,10 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/mockcredit/values"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "CreditScore.json"
+    }
+  }

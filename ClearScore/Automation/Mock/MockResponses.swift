@@ -23,5 +23,4 @@ struct Mock {
     """.utf8)
     
     static let errorResponse = Data("{{}".utf8)
-    
 }

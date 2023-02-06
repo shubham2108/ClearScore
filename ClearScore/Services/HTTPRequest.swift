@@ -15,7 +15,11 @@ enum HTTPError: Error {
     case networkError(String)
 }
 
-final class HTTPManager {
+protocol DataProviding {
+    func fetch<T: Decodable>(with url: String) -> AnyPublisher<T, HTTPError>
+}
+
+final class HTTPRequest: DataProviding {
     private let session: URLSession
     
     init(session: URLSession) {
@@ -23,12 +27,6 @@ final class HTTPManager {
     }
     
     func fetch<T: Decodable>(with url: String) -> AnyPublisher<T, HTTPError> {
-        
-        // Mock response when running XCUI tests
-        guard !AutomationHelper().isEnabled else {
-            return mockFetch(with: url)
-        }
-        
         guard let dataURL = URL(string: url) else {
             return Fail(error: HTTPError.invalidURL).eraseToAnyPublisher()
         }
@@ -44,9 +42,9 @@ final class HTTPManager {
 }
 
 // Mock response for UI automation tests
-extension HTTPManager {
+class MockRequest: DataProviding {
     
-    func mockFetch<T: Decodable>(with url: String) -> AnyPublisher<T, HTTPError> {
+    func fetch<T>(with url: String) -> AnyPublisher<T, HTTPError> where T : Decodable {
         let userCreditDetails = try? JSONDecoder().decode(T.self, from: AutomationHelper().getMockedResponse())
 
         guard let creditDetails = userCreditDetails else {

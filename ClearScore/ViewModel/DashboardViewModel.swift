@@ -42,7 +42,9 @@ final class DashboardViewModel {
                 self?.showSpinner = false
                 switch completion {
                 case .finished: break
-                case .failure: self?.showAlert = true
+                case let .failure(error):
+					print(error)
+					self?.showAlert = true
                 }
             }, receiveValue: { [weak self] details in
                 guard let self = self else { return }
