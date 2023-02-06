@@ -17,8 +17,10 @@ final class DashboardViewScenarios: UITestCase {
     }
     
     func testDeshboardViewContent_whenNetworkRequestNotFailed_usingWireMock() {
+		//WireMock
 		postData(score: 800)
-
+		//
+		
         application.launchArguments += [ResponseType.success.rawValue]
         application.launch()
 
@@ -30,6 +32,7 @@ final class DashboardViewScenarios: UITestCase {
     }
 
 	func testDeshboardViewContent_whenNetworkRequestNotFailed_usingShock() {
+		//Shock
 		let route: MockHTTPRoute = .simple(
 			method: .get,
 			urlPath: "/mockcredit/values",
@@ -38,6 +41,7 @@ final class DashboardViewScenarios: UITestCase {
 		)
 
 		mockServer.setup(route: route)
+		//
 
 		application.launchArguments += [ResponseType.success.rawValue]
 		application.launch()

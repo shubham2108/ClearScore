@@ -20,8 +20,11 @@ class UITestCase: XCTestCase {
     
     override func setUpWithError() throws {
         continueAfterFailure = false
+
+		//Shock
 		mockServer = MockServer(port: 9999, bundle: Bundle(for: BundleFinder.self))
 		mockServer.start()
+		//
 
         // Set "XCUI" launch argument for all the tests
         application.launchArguments += ["-runLocal"]
@@ -29,14 +32,14 @@ class UITestCase: XCTestCase {
 
     override func tearDownWithError() throws {
         application.terminate()
+		//Shock
 		mockServer.stop()
-//		resetRequest()
+		//
+		//WireMock
+		resetRequest()
 
         try super.tearDownWithError()
     }
-
-	//		let jsonStringg = "{ \"request\": { \"url\": \"/get/this\", \"method\": \"GET\" }, \"response\": { \"status\": 200, \"body\": \"Hello Shubham!\" } }"
-	//		guard let jsonData = jsonStringg.data(using: .utf8) else { return }
 
 	func postData(score: Int) {
 		let json: [String: Any] = [
